@@ -339,8 +339,9 @@ function gitFileChangesExtraction(gitData, commit, orgData, job, gitAuth) {
                 var commitDay = daysArr[comDate.getDay()];
                 var commitMonth = monthsArr[comDate.getMonth()];
                 var commitYear = comDate.getFullYear().toString();
+                var formattedDate = commitMonth+" "+" "+comDate.getDay().toString()+" "+commitYear;
                 var gitFormatedDataJson = {
-                    commitDate: commit.commit.committer.date,
+                    commitDate: formattedDate,
                     commitDay: commitDay,
                     commitMonth: commitMonth,
                     commitYear: commitYear,
