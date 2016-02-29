@@ -10,7 +10,7 @@ var exec = require('child_process').execSync;
 
 
 function runForAllOrgs() {
-  
+
     console.log("Going to start for "+ organisation.organizationFileName);
     exec('sudo service td-agent restart');
 
@@ -29,7 +29,7 @@ function runForAllOrgs() {
       jobsExecuter.getAndDumpGitLogs();
     }
 
-  
+
 }
  runForAllOrgs();
 setInterval(runForAllOrgs, 1800000);

@@ -1,7 +1,6 @@
 
   {
-    "organizationName":"Test Organisation",
-    "organizationFileName":"./data/testOrg.json",
-    "organizationJobFileName": "./data/testOrgJobs.json"
+    "organizationName":"CapitalOne",
+    "organizationFileName":"./data/CapitalOneFile.json",
+    "organizationJobFileName": "./data/CapitalOneJobs.json"
   }
-
