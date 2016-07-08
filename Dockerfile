@@ -48,7 +48,8 @@ ENV FLUENTD_CONF="fluent.conf"
 EXPOSE 24224 5140 7070
 
 #Run the fluentd as a deamon
-RUN exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins --daemon /home/fluent/fluentd.pid $FLUENTD_OPT
+# RUN exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins --daemon /home/fluent/fluentd.pid $FLUENTD_OPT
+RUN exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /usr/lib/ruby/gems/2.3.0/gems/ --daemon /home/fluent/fluentd.pid $FLUENTD_OPT
 
 WORKDIR /home/fluent/Git-Log-Fetcher
 ADD . /home/fluent/Git-Log-Fetcher
