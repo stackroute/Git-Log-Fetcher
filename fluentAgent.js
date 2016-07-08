@@ -1,6 +1,8 @@
 var fluent = require('fluent-logger-node');
 var logger;
 var counter  =0;
+var sleep = require('sleep');
+
 module.exports.fluentLogger = function (data, db, col) {
     console.log("***********************************************");
     console.log("***********************************************");
@@ -22,6 +24,7 @@ module.exports.fluentLogger = function (data, db, col) {
 
         // console.log(data);
         logger.post(col, data);
+        sleep.usleep(300000);
         console.log("dumping to fluent DB: "+db+" collection: "+col+ "counter= "+counter);
         counter++;
     }

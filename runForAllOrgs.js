@@ -12,7 +12,7 @@ var exec = require('child_process').execSync;
 function runForAllOrgs() {
 
     console.log("Going to start for "+ organisation.organizationFileName);
-    exec('sudo service td-agent restart');
+    //exec('sudo service td-agent restart');
 
 
     orgJobMaker(organisation.organizationFileName, organisation.organizationJobFileName);
