@@ -1,6 +1,6 @@
 var fs = require('fs');
 var organisation = fs.readFileSync(process.argv[2]);
-organisation  = JSON.parse(organisation);
+organisation = JSON.parse(organisation);
 
 var jobsExecuter = require('./jobsExecuter');
 var orgJobMaker = require('./orgJobMaker');
@@ -11,7 +11,7 @@ var exec = require('child_process').execSync;
 
 function runForAllOrgs() {
 
-    console.log("Going to start for "+ organisation.organizationFileName);
+    console.log("Going to start for " + organisation.organizationFileName);
     //exec('sudo service td-agent restart');
 
 
@@ -22,14 +22,14 @@ function runForAllOrgs() {
     orgJobs = JSON.parse(orgJobs);
     console.log("orgJobs");
     console.log(orgJobs);
-    if(orgJobs.status != "running"){
-      //Run all the jobs
-      console.log("jobs are idle");
-      jobsExecuter.gitLogFetchAndDumpInit(organisation.organizationJobFileName,organisation.organizationFileName);
-      jobsExecuter.getAndDumpGitLogs();
+    if (orgJobs.status != "running") {
+        //Run all the jobs
+        console.log("jobs are idle");
+        jobsExecuter.gitLogFetchAndDumpInit(organisation.organizationJobFileName, organisation.organizationFileName);
+        jobsExecuter.getAndDumpGitLogs();
     }
 
 
 }
- runForAllOrgs();
+runForAllOrgs();
 setInterval(runForAllOrgs, 1800000);

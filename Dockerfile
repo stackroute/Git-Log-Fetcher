@@ -45,7 +45,7 @@ COPY fluent.conf /fluentd/etc/
 ENV FLUENTD_OPT=""
 ENV FLUENTD_CONF="fluent.conf"
 
-EXPOSE 24224 5140
+EXPOSE 24224 5140 7070
 
 #Run the fluentd as a deamon
 RUN exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins --daemon /home/fluent/fluentd.pid $FLUENTD_OPT
@@ -57,6 +57,6 @@ USER root
 RUN chown -R fluent:fluent /home/fluent/Git-Log-Fetcher
 USER fluent
 
-RUN npm install && npm install -g forever
+RUN npm install
 
 CMD ["node", "/home/fluent/Git-Log-Fetcher/runForAllOrgs.js ./data/testAllorgsFile.json"]
