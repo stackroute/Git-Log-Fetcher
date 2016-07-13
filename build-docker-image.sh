@@ -1,0 +1,1 @@
+docker build --rm=true -t tattva-git-logger:v1.0.0 .

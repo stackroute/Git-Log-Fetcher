@@ -1,0 +1,8 @@
+{
+  "name": "testWSLogs",
+  "version": "1.0.0",
+  "dependencies": {
+    "highland": "^3.0.0-beta.2",
+    "websocket-stream": "^3.2.1"
+  }
+}

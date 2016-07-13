@@ -423,7 +423,7 @@ module.exports.gitLogFetchAndDumpInit = function(orgJobQFileParam, organisationF
     console.log(orgJobQFile);
     orgData = fs.readFileSync(orgFile);
     orgData = JSON.parse(orgData);
-    console.log(orgData);
+    // console.log(orgData);
     fluentAgent.loggerIntializer(orgData.dbName);
 
 

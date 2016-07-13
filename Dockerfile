@@ -45,11 +45,9 @@ COPY fluent.conf /fluentd/etc/
 ENV FLUENTD_OPT=""
 ENV FLUENTD_CONF="fluent.conf"
 
-EXPOSE 24224 5140 7070
-
 #Run the fluentd as a deamon
 # RUN exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins --daemon /home/fluent/fluentd.pid $FLUENTD_OPT
-RUN exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /usr/lib/ruby/gems/2.3.0/gems/ --daemon /home/fluent/fluentd.pid $FLUENTD_OPT
+#RUN exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /usr/lib/ruby/gems/2.3.0/gems/ --daemon /home/fluent/fluentd.pid $FLUENTD_OPT
 
 WORKDIR /home/fluent/Git-Log-Fetcher
 ADD . /home/fluent/Git-Log-Fetcher
@@ -60,4 +58,11 @@ USER fluent
 
 RUN npm install
 
-CMD ["node", "/home/fluent/Git-Log-Fetcher/runForAllOrgs.js ./data/testAllorgsFile.json"]
+RUN rm ./data/CapitalOneJobs.json
+
+WORKDIR /home/fluent/Git-Log-Fetcher
+
+EXPOSE 24224 5140 24242 7070
+
+#CMD ["node", "runForAllOrgs.js", "./data/testAllorgsFile.json"]
+CMD ["ash", "runlogger.sh"]
