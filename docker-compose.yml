@@ -1,0 +1,31 @@
+version: '2'
+services:
+  tattva-git-logger:
+    image: tattva/tattva-git-logger:v0.1.0
+    build:
+      context: ./
+      dockerfile: Dockerfile-Tattva-Git-Logger
+    container_name: tattva-git-logger
+    network_mode: host
+    restart: always
+    depends_on:
+    - fluentd
+    environment:
+      FLUENTD_HOST: localhost
+      FLUENTD_FWD_PORT: 24242
+  fluentd:
+    image: fluentd/fluentd-websocket-output:v0.1.0
+    build: 
+      context: ./
+      dockerfile: Dockerfile-fluentd-websocket-output
+    container_name: fluentd-websocket
+    network_mode: host
+    restart: always
+    expose:
+      - 24224
+      - 24242
+      - 24284
+      - 5140
+      - 7070
+    ports:
+      - "7070:7070"

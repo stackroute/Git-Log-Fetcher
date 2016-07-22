@@ -1,27 +1,26 @@
 {
-    "name": "git-log-fetcher",
-    "version": "1.0.0",
-    "description": "It fetches the logs for a bunch of git repositories continously",
-    "main": "runForAllOrgs.js",
-    "scripts": {
-        "test": "node runForAllOrgs.js ./data/testAllorgsFile.json"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/pranay06/Git-Log-Fetcher.git"
-    },
-    "author": "Pranay Gandhi",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/pranay06/Git-Log-Fetcher/issues"
-    },
-    "homepage": "https://github.com/pranay06/Git-Log-Fetcher#readme",
-    "dependencies": {
-        "fluent-logger-node": "0.0.3",
-        "har-validator": "^2.0.6",
-        "node-schedule": "^1.0.0",
-        "q": "^1.4.1",
-        "request": "^2.69.0",
-        "sleep": "^3.0.1"
-    }
+  "name": "git-log-fetcher",
+  "version": "1.0.0",
+  "description": "It fetches the logs for a bunch of git repositories continously",
+  "main": "runForAllOrgs.js",
+  "scripts": {
+    "test": "node runForAllOrgs.js ./data/testAllorgsFile.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranay06/Git-Log-Fetcher.git"
+  },
+  "author": "Pranay Gandhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranay06/Git-Log-Fetcher/issues"
+  },
+  "homepage": "https://github.com/pranay06/Git-Log-Fetcher#readme",
+  "dependencies": {
+    "fluent-logger-node": "0.0.3",
+    "har-validator": "^2.0.6",
+    "node-schedule": "^1.0.0",
+    "q": "^1.4.1",
+    "request": "^2.69.0"
+  }
 }

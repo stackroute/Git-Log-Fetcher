@@ -1,0 +1,30 @@
+FROM fluent/fluentd:latest-onbuild
+
+MAINTAINER Basavarj K N <rajiff@gmail.com>
+LABEL Description="Minimal Fluent logger with websocket output plugin installed" 
+LABEL Version="1.0"
+
+USER root
+
+RUN apk --no-cache --update add \
+                            build-base \
+                            ca-certificates \
+                            ruby \
+                            ruby-irb \
+                            ruby-dev && \
+    echo 'gem: --no-document' >> /etc/gemrc && \
+    gem install oj && \
+    gem install fluent-plugin-websocket && \
+    apk del build-base ruby-dev && \
+    rm -rf /tmp/* /var/tmp/* /var/cache/apk/*
+
+ENV FLUENTD_OPT=""
+ENV FLUENTD_CONF="fluent.conf"
+
+USER fluent
+WORKDIR /home/fluent
+ENV PATH /home/fluent/.gem/ruby/2.3.0/bin:$PATH
+
+EXPOSE 24224 24284 5140 24242 7070
+
+CMD fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins $FLUENTD_OPT
