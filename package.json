@@ -4,7 +4,7 @@
   "private": true,
   "description": "It fetches the logs for a bunch of git repositories continously",
   "scripts": {
-    "start": "node runForAllOrgs.js data/testAllorgsFile.json"
+    "start": "node ./runForAllOrgs.js ./data/testAllorgsFile.json"
   },
   "dependencies": {
     "fluent-logger-node": "0.0.3",
