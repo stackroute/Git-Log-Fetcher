@@ -1,5 +1,7 @@
 FROM mhart/alpine-node
 
+RUN apk update && apk upgrade && apk add --update python build-base
+
 # Create app directory
 RUN mkdir -p /usr/src/app && echo "Tattva Git Logger"
 COPY . /usr/src/app/
@@ -10,4 +12,4 @@ WORKDIR /usr/src/app
 
 # RUN rm ./data/CapitalOneJobs.json
 
-CMD [ 'node', './runForAllOrgs.js', './data/testAllorgsFile.json' ]
+CMD [ 'node', '"runForAllOrgs.js"', '"data/testAllorgsFile.json"' ]

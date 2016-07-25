@@ -6,7 +6,7 @@ LABEL Version="1.0"
 
 USER root
 
-RUN apk --no-cache --update add \
+RUN apk update && apk upgrade && apk --no-cache --update add \
                             build-base \
                             ca-certificates \
                             ruby \
@@ -15,7 +15,7 @@ RUN apk --no-cache --update add \
     echo 'gem: --no-document' >> /etc/gemrc && \
     gem install oj && \
     gem install fluent-plugin-websocket && \
-    apk del build-base ruby-dev && \
+#    apk del build-base ruby-dev && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/*
 
 ENV FLUENTD_OPT=""

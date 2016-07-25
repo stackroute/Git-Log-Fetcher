@@ -10,7 +10,8 @@ USER root
 RUN apk --no-cache --update add \
                             build-base \
                             ca-certificates \
-                            ruby \
+                            python \
+			    ruby \
                             ruby-irb \
                             ruby-dev && \
     echo 'gem: --no-document' >> /etc/gemrc && \
