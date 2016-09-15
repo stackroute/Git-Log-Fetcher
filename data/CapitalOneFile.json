@@ -1,0 +1,50 @@
+{
+  "_id": "56d178e3ee83c8528a0dab66",
+  "organizationName": "CapitalOne",
+  "gitHost": "https://api.github.com",
+
+  "dbName": "CapitalOneDBNew",
+  "gitOauthSets": [
+  ],
+  "repositoryData": [{
+    "gitUserName": "mongodb",
+    "repo": "mongo-qa",
+    "_id": "56d19f753fefb2db058051b4"
+  }, {
+    "gitUserName": "mongodb",
+    "repo": "mongo-java-driver",
+    "_id": "56d19f753fefb2db058051b3"
+  }, {
+    "gitUserName": "mongodb",
+    "repo": "mongo-python-driver",
+    "_id": "56d19f753fefb2db058051b2"
+  }, {
+    "gitUserName": "mongodb",
+    "repo": "mongo",
+    "_id": "56d19f753fefb2db058051b1"
+  }, {
+    "gitUserName": "mongodb",
+    "repo": "mongo-ruby-driver",
+    "_id": "56d19f753fefb2db058051b0"
+  }, {
+    "gitUserName": "mongodb",
+    "repo": "mongo-php-driver-legacy",
+    "_id": "56d19f753fefb2db058051af"
+  }, {
+    "gitUserName": "mongodb",
+    "repo": "mongo-perl-driver",
+    "_id": "56d19f753fefb2db058051ae"
+  }, {
+    "gitUserName": "mongodb",
+    "repo": "mongo-snippets",
+    "_id": "56d19f753fefb2db058051ad"
+  }, {
+    "gitUserName": "mongodb",
+    "repo": "mongoid",
+    "_id": "56d19f753fefb2db058051ac"
+  }, {
+    "gitUserName": "mongodb",
+    "repo": "mongo-c-driver-legacy",
+    "_id": "56d19f753fefb2db058051ab"
+  }]
+}

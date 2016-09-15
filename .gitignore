@@ -31,5 +31,3 @@ npm-debug.log
 # Bower modules are not needed to be in Git
 bower_modules
 
-# Data folder need not be committed, as it has Auth keys, which will get invalidated if committed to github
-data

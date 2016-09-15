@@ -1,0 +1,16 @@
+{
+	"_id": "56cf129aee83c8528a0dab27",
+	"organizationName": "Test Organisation",
+	"gitHost": "https://api.github.com",
+	"dbName": "Node-DevelopersDB1",
+	"gitOauthSets": [
+		"9f36feabdcdbd94d9eb2a000136b1adb303539b5"
+	],
+	"repositoryData": [
+		{
+			"gitUserName": "stackroute",
+			"repo": "newThemeTattva",
+			"_id": "56cf176d4c8ec9ba0997c7fe"
+		}
+	]
+}

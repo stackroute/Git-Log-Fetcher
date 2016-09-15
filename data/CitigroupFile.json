@@ -1,0 +1,49 @@
+{
+	"_id": "56d173d6ee83c8528a0dab64",
+	"organizationName": "Citigroup",
+	"gitHost": "https://api.github.com",
+	"dbName": "CitigroupDB",
+	"gitOauthSets": [
+],
+	"repositoryData": [{
+		"gitUserName": "twbs",
+		"repo": "bootstrap",
+		"_id": "56d1879bd4c54d3d0585aa98"
+	}, {
+		"gitUserName": "twbs",
+		"repo": "bootstrap-sass",
+		"_id": "56d1879bd4c54d3d0585aa97"
+	}, {
+		"gitUserName": "twbs",
+		"repo": "bootstrap-blog",
+		"_id": "56d1879bd4c54d3d0585aa96"
+	}, {
+		"gitUserName": "twbs",
+		"repo": "bootstrap-server",
+		"_id": "56d1879bd4c54d3d0585aa95"
+	}, {
+		"gitUserName": "twbs",
+		"repo": "ratchet",
+		"_id": "56d1879bd4c54d3d0585aa94"
+	}, {
+		"gitUserName": "twbs",
+		"repo": "bootstrap-expo",
+		"_id": "56d1879bd4c54d3d0585aa93"
+	}, {
+		"gitUserName": "twbs",
+		"repo": "grunt-css-flip",
+		"_id": "56d1879bd4c54d3d0585aa92"
+	}, {
+		"gitUserName": "twbs",
+		"repo": "rorschach",
+		"_id": "56d1879bd4c54d3d0585aa91"
+	}, {
+		"gitUserName": "twbs",
+		"repo": "bootlint",
+		"_id": "56d1879bd4c54d3d0585aa90"
+	}, {
+		"gitUserName": "twbs",
+		"repo": "grunt-bootlint",
+		"_id": "56d1879bd4c54d3d0585aa8f"
+	}]
+}
