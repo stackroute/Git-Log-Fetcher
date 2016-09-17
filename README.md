@@ -9,6 +9,8 @@ Follow these steps
 2. Edit the data/CapitalOneFile.json with OAuth peronsal token with read permission for github public repositories, you can generate the personal token from your account settings page, check this [here](https://github.com/settings/tokens)
 
 3. Add at least 5 to 10 tokens so that you can see the logs fetching for at least 10 minutes 
+	- To add the tokens open the data/CapitalOneFile.json and add the token as array elements into key "gitOauthSets"
+		Eg: "gitOauthSets" : [ "<Your OAuth Token>", "<Your OAuth Token>", <Your OAuth Token> ]
 
 4. Once you have added the OAuth tokens, you can simply run as a node app or as a Docker container
 	- Run as node app using npm script (you need to have fluent installed along with websocket OUT plugin)
